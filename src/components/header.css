@@ -1,0 +1,15 @@
+header{
+    width: 100%;
+    height:auto;
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #05445E;
+    color: #FFFFFF;
+  }
+  h1{
+    font-size: 1.5em;
+    margin: 0px;
+  }
+  
