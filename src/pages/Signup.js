@@ -28,7 +28,7 @@ const Signup=()=>{
             body:JSON.stringify(userData)
         })
         
-        navigate("/verify"); 
+        navigate("/studentHome"); 
     }
 
 
@@ -45,7 +45,7 @@ const Signup=()=>{
                     <Textbox label="Date of Birth" name={userData.dob} inputDataChange={(e) => setUserData({...userData, dob: e.target.value})}/>
                     <Textbox label="Password" name={userData.password} inputDataChange={(e) => setUserData({...userData, password: e.target.value})}/>
                     <Textbox label="Confirm password" name={userData.cpassword} inputDataChange={(e) => setUserData({...userData, cpassword: e.target.value})}/>
-                    <Button type="submit" classname="signupBtn" name="signupBtn" label="Sign Up"/>
+                    <Button type="submit" className="signupBtn" name="signupBtn" label="Sign Up"/>
                 </form>
             </div>
         </div>
