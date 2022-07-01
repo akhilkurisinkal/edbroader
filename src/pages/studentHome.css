@@ -1,0 +1,68 @@
+#studentHome{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 0.8em;
+}
+#studentHome div.timeline{
+    box-sizing: border-box;
+    padding: 2% 3%;
+}
+
+
+
+img{
+    width: 100%;
+    height:auto
+}
+
+
+
+#outer3{
+    display: flex;
+    flex-direction: column;
+
+}
+#outer3 div{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.tick{
+    width: 24px;
+    height: 24px;
+    border:2px solid black;
+    border-radius: 50%;
+    /* background-image: url(../assets/images/tick.svg); */
+    background-size: 24px;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    box-sizing:border-box;
+    position: relative;
+    margin-right: 15px;
+}
+.tickImg{
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+.bar{
+    width: 24px;
+    height: 60px;
+    justify-content: center;
+}
+.barImg{
+    width: 2px;
+    height: 60px;
+}
+
+.statusHead{
+    width: 300px;
+    height: 24px;
+    overflow: hidden;
+}

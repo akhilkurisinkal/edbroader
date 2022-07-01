@@ -1,7 +1,7 @@
 import { React, useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
-import Textbox from "../components/Textbox";
+import Button from "../../components/Button";
+import Textbox from "../../components/Textbox";
 
 const Signup=()=>{
     const navigate=useNavigate();
@@ -21,14 +21,21 @@ const Signup=()=>{
        
     const signupStudent=(event)=>{
         event.preventDefault();
-        console.log(userData);
         fetch('http://localhost:3000/signup/',{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify(userData)
         })
-        
-        navigate("/studentHome"); 
+        .then(res => res.json())
+        .then(data => {
+            if(data.status!=="success"){
+                console.log("Email already registered");
+            }else{
+                localStorage.setItem("id",userData.email);
+                console.log("navigating to verification page");
+                navigate("/verify");
+            }
+        });
     }
 
 

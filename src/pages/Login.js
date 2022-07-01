@@ -1,4 +1,4 @@
-import { React, useState, useEffect} from "react";
+import { React, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Textbox from "../components/Textbox";
@@ -18,7 +18,17 @@ const Login=()=>{
             headers:{'Content-type':'application/json'},
             body:JSON.stringify(loginData)  
         })
-        .then(res => {if (res.statusText=="OK"){navigate("/studentHome")}})
+        .then(res => res.json())
+        .then(data=>{
+            if(data.status!=="verified"){
+                console.log("User not verified");
+                navigate("/verify");
+            }else{
+                console.log("navigating to student home");
+                navigate("/studentHome");
+            }
+            localStorage.setItem("id",loginData.id);
+        })
     }
     return(
         <div className="container-box cg-background-clr">

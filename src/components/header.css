@@ -3,13 +3,33 @@ header{
     height:auto;
     padding: 2% 5%;
     display: flex;
-    align-items: center;
     box-sizing: border-box;
-    background-color: #05445E;
-    color: #FFFFFF;
+    color: #05445E;
+    position: relative;
+    align-items: stretch;
   }
-  h1{
-    font-size: 1.5em;
+
+header div#logo{
+  align-self: flex-start;
+}
+
+header div#menu{
+  align-self: flex-end;
+  flex: 1;
+}
+
+header div#menu img{
+  width: 24px;
+  height: auto;
+  float: right;
+}
+
+header h1{
+    font-size: 1.3em;
     margin: 0px;
-  }
+    padding: 3px;
+}
+
+
+  
   
