@@ -1,7 +1,7 @@
 import { React, useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
-import Textbox from "../../components/Textbox";
+import Button from "../../components/button/Button";
+import Textbox from "../../components/textbox/Textbox";
 
 const Signup=()=>{
     const navigate=useNavigate();
@@ -53,6 +53,7 @@ const Signup=()=>{
                     <Textbox label="Password" name={userData.password} inputDataChange={(e) => setUserData({...userData, password: e.target.value})}/>
                     <Textbox label="Confirm password" name={userData.cpassword} inputDataChange={(e) => setUserData({...userData, cpassword: e.target.value})}/>
                     <Button type="submit" className="signupBtn" name="signupBtn" label="Sign Up"/>
+                    <span>Already have an account?<a href="/login">Login here</a></span>
                 </form>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Landing.css";
-import Button from "../../components/Button";
+import Button from "../../components/button/Button";
 import hero from "../../assets/images/hero.png";
 import { useNavigate } from "react-router-dom";
 

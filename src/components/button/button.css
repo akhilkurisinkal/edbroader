@@ -1,0 +1,15 @@
+
+.signupBtn{
+    width:90%;
+    height: 7vh;
+    background-color: #05445E;
+    color:#FFFFFF;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+
+}
+.space-top{
+    margin-top: 3%;
+}
