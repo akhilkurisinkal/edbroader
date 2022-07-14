@@ -35,10 +35,11 @@ useEffect(() => {
     }
 
     return(
-        <div>
+        <div className="container-box">
             <form onSubmit={verifyUser}>
+                <h3>Enter verification code send to your email</h3>
                 <input type="text" onChange={(e)=> setCode({...code,vcode:e.target.value})} />
-                <button className="signupBtn">Verify</button>
+                <button className="signupBtn space-top">Verify</button>
             </form>
         </div>
     )
